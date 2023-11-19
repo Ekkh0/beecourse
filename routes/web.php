@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,12 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/login', [SessionController::class, 'index']);
+Route::get('/logout', [SessionController::class, 'logout']);
+Route::post('/login', [SessionController::class, 'login']);
+Route::get('/register', [SessionController::class, 'register']);
+Route::post('/create', [SessionController::class, 'create']);
 
 Route::get('/cart', function () {
     return view('cart');
