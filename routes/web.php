@@ -26,6 +26,10 @@ Route::get('/course', function () {
     return view('course');
 });
 
+Route::get('/nlp', function () {
+    return view('nlp');
+});
+
 Route::get('/login', [SessionController::class, 'index']);
 Route::get('/logout', [SessionController::class, 'logout']);
 Route::post('/login', [SessionController::class, 'login']);
