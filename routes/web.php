@@ -22,6 +22,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/course', function () {
+    return view('course');
+});
+
 Route::get('/login', [SessionController::class, 'index']);
 Route::get('/logout', [SessionController::class, 'logout']);
 Route::post('/login', [SessionController::class, 'login']);
