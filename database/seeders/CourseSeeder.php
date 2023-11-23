@@ -27,18 +27,24 @@ class CourseSeeder extends Seeder
                 'description' => 'Harness The Power Of Machine Learning For Unsupervised & Supervised Learning In Python',
                 'publish_date' => $publishDate1->format('Y-m-d H:i:s'),
                 'price' => 199.900,
+                'rating' => 4.8,
+                'tutor' => 'Emily Johnson'
             ],
             [
                 'name' => 'Introduction to AI, Machine Learning and Python basics',
                 'description' => 'Learn to understand Artificial Intelligence and Machine Learning algorithms, and learn the basics of Python Programming',
                 'publish_date' => $publishDate2->format('Y-m-d H:i:s'),
                 'price' => 99.900,
+                'rating' => 4.8,
+                'tutor' => 'John Ash'
             ],
             [
                 'name' => 'The Ultimate Guide to Game Development with Unity (Official)',
                 'description' => 'Created in partnership with Unity Technologies: learn C# by developing 2D & 3D games with this comprehensive guide',
                 'publish_date' => $publishDate3->format('Y-m-d H:i:s'),
                 'price' => 159.900,
+                'rating' => 4.4,
+                'tutor' => 'Ryan Matthews'
             ],
         ]);
     }
