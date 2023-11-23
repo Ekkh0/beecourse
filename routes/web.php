@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,17 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/course', function () {
-    return view('course');
-});
+Route::get('/', [CourseController::class,'index'])->name('home');
+Route::get('/Courses', [CourseController::class,'pagecourses'])->name('course');
 
 Route::get('/nlp', function () {
     return view('nlp');
