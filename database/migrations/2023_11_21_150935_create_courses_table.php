@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('description');
             $table->dateTime('publish_date');
             $table->integer('price');
+            $table->float('rating');
+            $table->string('tutor');
             $table->timestamps();
         });
     }
