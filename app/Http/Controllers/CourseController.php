@@ -16,4 +16,9 @@ class CourseController extends Controller
         $courses = Course::paginate(9);
         return view("course", ["courses"=>$courses]);
     }
+
+    public function about(){
+        $courses = Course::paginate(9);
+        return view("about");
+    }
 }

@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CourseController::class,'index'])->name('home');
 Route::get('/Courses', [CourseController::class,'pagecourses'])->name('course');
+Route::get('/About', [CourseController::class,'about'])->name('about');
 
-Route::get('/nlp', function () {
-    return view('nlp');
+Route::get('/pythoncourse', function () {
+    return view('pythoncourse');
 });
 
 Route::get('/login', [SessionController::class, 'index']);
@@ -35,4 +36,5 @@ Route::get('/cart', function () {
 Route::get('/account', function () {
     return view('account');
 });
+
 
