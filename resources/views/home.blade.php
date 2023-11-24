@@ -3,26 +3,13 @@
 
 @section('extraextracss')
 <style>
-    .carousel-item {
-        height: 32rem;
-        background-color: #777;
-        color: white;
-        position: relative;
-    }
-
     .container {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         padding-bottom: 50px;
-    }
-
-    .course-descriptor{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+    }   
 </style>
 @endsection
 
