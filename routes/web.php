@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DetailCourseController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CartController;
@@ -39,11 +40,18 @@ Route::get('/account', function () {
     return view('account');
 });
 
+
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/add/{courseId}', [CartController::class, 'addToCart'])->name('cart.addToCart');
-Route::post('/cart/add/{courseId}', [CartController::class, 'addToCart']); 
+Route::post('/cart/add/{courseId}', [CartController::class, 'addToCart']);
 Route::get('/cart/reset', [CartController::class, 'resetCart'])->name('cart.reset');
 Route::get('/cart/delete/{courseId}', [CartController::class, 'delete'])->name('cart.delete');
 
 
 
+Route::get('/clustering-classification', [DetailCourseController::class, 'index'])->name('clustering-classification');
+
+
+Route::get('/clustering-classification-content/{id}', [DetailCourseController::class, 'showContent'])->name('clustering-classification-content');
+
+// Route::get('/clustering-classification-content/{id}', [DetailCourseController::class,'pagecontents'])->name('clustering-classification-content');

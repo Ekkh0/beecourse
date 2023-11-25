@@ -1,6 +1,6 @@
 @extends('layout.contentlayout')
 @section('titletitle')
-    NLP
+Clustering & Classification With Machine Learning In Python
 @endsection
 
 @section('extraextracss')
@@ -24,6 +24,8 @@
             background-color: #f8f9fa !important;
         }
     </style>
+
+    <link rel="stylesheet" href="/css/contents.css">
 @endsection
 
 @section('contentcontent')
@@ -73,80 +75,86 @@
                 </div>
 
                 <!-- Course Content -->
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <h3>Course Content</h3>
-                        <ol>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="chapter1Dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="text-decoration: none; color: inherit;">
-                                    Chapter 1: Introduction to NLP
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="chapter1Dropdown">
-                                    <a class="dropdown-item" href="#">Video 1</a>
-                                    <a class="dropdown-item" href="#">Video 2</a>
-                                    <a class="dropdown-item" href="#">Video 3</a>
-                                    <a class="dropdown-item" href="#">Video 4</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="chapter2Dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="text-decoration: none; color: inherit;">
-                                    Chapter 2: Text Preprocessing Techniques
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="chapter2Dropdown">
-                                    <a class="dropdown-item" href="#">Video 1</a>
-                                    <a class="dropdown-item" href="#">Video 2</a>
-                                    <a class="dropdown-item" href="#">Video 3</a>
-                                    <a class="dropdown-item" href="#">Video 4</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="chapter3Dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="text-decoration: none; color: inherit;">
-                                    Chapter 3: Building Language Models
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="chapter3Dropdown">
-                                    <a class="dropdown-item" href="#">Video 1</a>
-                                    <a class="dropdown-item" href="#">Video 2</a>
-                                    <a class="dropdown-item" href="#">Video 3</a>
-                                    <a class="dropdown-item" href="#">Video 4</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="chapter4Dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="text-decoration: none; color: inherit;">
-                                    Chapter 4: Sentiment Analysis
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="chapter4Dropdown">
-                                    <a class="dropdown-item" href="#">Video 1</a>
-                                    <a class="dropdown-item" href="#">Video 2</a>
-                                    <a class="dropdown-item" href="#">Video 3</a>
-                                    <a class="dropdown-item" href="#">Video 4</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" id="chapter5Dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="text-decoration: none; color: inherit;">
-                                    Chapter 5: Real-world NLP Projects
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="chapter5Dropdown">
-                                    <a class="dropdown-item" href="#">Video 1</a>
-                                    <a class="dropdown-item" href="#">Video 2</a>
-                                    <a class="dropdown-item" href="#">Video 3</a>
-                                    <a class="dropdown-item" href="#">Video 4</a>
-                                </div>
-                            </li>
+                {{-- <div class="courses-content-dropdown">
+                    <label class="drop-label">Chapter 1: Introduction to NLP</label>
+                    <select name="content" id="content" class="dropdown-input">
+                        <option value="">Test</option>
+                    </select>
+                </div> --}}
 
-                        </ol>
-                    </div>
+
+
+
+
+                <div class="course-content">
+
+                    @foreach ($content as $data)
+
+                        {{-- ID name {{$data->name}} --}}
+                        {{-- <br> --}}
+
+                        @foreach ($data->content as $content)
+
+
+
+                            {{-- {{$content->course_id}} --}}
+                            {{-- {{$content->course_url}} --}}
+
+                            <div class="testing">
+                                <div class="col">
+                                    <div class="card h-100">
+
+                                        {{-- lagi coba masukin youtube video yang autoplay --}}
+                                        
+                                       {{-- <iframe src="{{$content->course_url}}" frameborder="0"></iframe> --}}
+                                       <p><iframe width="560" height="315" src="https://www.youtube.com/embed/wpdU7ucBfqhRsVA_" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">youtube embed code</a> and <a href="https://allabeviljas.se/lumify/">lumify lån</a></iframe></p>
+
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{$content->description}}</h5>
+                                            <p class="card-text course-descriptor">{{$content->duration}}</p>
+                                        </div>
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="badge bg-primary"><i class="bi bi-star"></i> 4.7</span>
+                                                    <span class="text-muted">Average Rating</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="text-muted">Price:</span>
+                                                    <span class="text-success">${{$content->course_id}}</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="text-muted">Tutor:</span>
+                                                    <span>John Doe</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        @endforeach
+
+
+                    @endforeach
+
+
+
                 </div>
             </div>
+
 
             <!-- Placeholder for Additional Content / Features -->
 

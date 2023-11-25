@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                         <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="nlp" class="btn btn-primary">Detail</a>
+                            <a href="{{route('clustering-classification-content', $course->id)}}" class="btn btn-primary">Detail</a>
                             @php
                                 $cart = session('cart', []);
                             @endphp
@@ -48,8 +48,9 @@
                                     <button type="submit" class="btn btn-primary">Add to Cart</button>
                                 </form>
                             @endif
+
                         </div>
-                        
+
                     </div>
                 </div>
                 @endforeach
