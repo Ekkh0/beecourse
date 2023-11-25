@@ -92,7 +92,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="badge bg-primary"><i class="bi bi-star"></i> 4.7</span>
+                                    <span class="badge bg-primary"><i class="bi bi-star"></i>{{$course->rating}}</span>
                                     <span class="text-muted">Average Rating</span>
                                 </div>
                             </li>
@@ -105,7 +105,7 @@
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="text-muted">Tutor:</span>
-                                    <span>John Doe</span>
+                                    <span>{{$course->tutor}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -160,7 +160,13 @@
     <section class="containerJoin mt-5 text-center">
         <h2>Ready to Start Learning?</h2>
         <p>Join thousands of learners and enhance your skills today.</p>
-        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="
+        @if(Auth::check())
+        /Courses
+        @else
+        /register
+        @endif
+        " class="btn btn-primary btn-lg">Get Started</a>
     </section>
     {{-- End Benefit --}}
 @endsection

@@ -7,6 +7,14 @@
 @section('content')
 <body>
 	<div class="section">
+		<div class="logocontainer">
+			<div class="navbar-brand logodiagonalbackground">
+				<a class="fs-3 beelogo" href="/">
+					<div class="beelogobackground"></div>
+					<img src="image/logo.png" alt="" style="width: 200px">
+				</a>
+			</div>
+		</div>
 		<div class="container">
 			@error('wronginfo')
 			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: absolute; transform:translateX(-50%); left: 50%; top: 3%;">
