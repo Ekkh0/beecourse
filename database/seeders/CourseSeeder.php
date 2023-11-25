@@ -20,6 +20,9 @@ class CourseSeeder extends Seeder
         $publishDate1 = Carbon::create(2023, 1, 1, 12, 0, 0);
         $publishDate2 = Carbon::create(2021, 7, 3, 12, 0, 0);
         $publishDate3 = Carbon::create(2022, 10, 10, 11, 0, 0);
+        $publishDate4 = Carbon::create(2020, 9, 2, 13, 0, 0);
+        $publishDate5 = Carbon::create(2021, 3, 2, 16, 0, 0);
+        $publishDate6 = Carbon::create(2020, 12, 7, 14, 0, 0);
 
         DB::table('courses')->insert([
             [
@@ -45,6 +48,30 @@ class CourseSeeder extends Seeder
                 'price' => 159.900,
                 'rating' => 4.4,
                 'tutor' => 'Ryan Matthews'
+            ],
+            [
+                'name' => 'Python for Deep Learning: Build Neural Networks in Python',
+                'description' => 'Learn the fundamentals of Deep Learning theory, how to build artificial neural networks with Tensorflow and Keras, and making predictions using the models created',
+                'publish_date' => $publishDate4->format('Y-m-d H:i:s'),
+                'price' => 100.400,
+                'rating' => 4.6,
+                'tutor' => 'Zoe Mitchell'
+            ],
+            [
+                'name' => 'Machine Learning & Generative AI',
+                'description' => "Explore the future of technology in our Machine Learning & Generative AI course. Master the principles of machine learning and delve into creative AI solutions. Whether you're a beginner or seeking advanced skills, join us to navigate and harness the power of these cutting-edge technologies.",
+                'publish_date' => $publishDate5->format('Y-m-d H:i:s'),
+                'price' => 80.700,
+                'rating' => 4.4,
+                'tutor' => 'Liam Donovan'
+            ],
+            [
+                'name' => 'Python for Data Science',
+                'description' => "Unlock the power of Python for Data Science in our comprehensive course. Dive into the world of data analysis, visualization, and manipulation using Python. Whether you're a beginner or looking to enhance your skills, this course provides hands-on experience with Python's data science libraries and tools. Join us to acquire the essential skills for extracting meaningful insights from data and making informed decisions in the dynamic field of Data Science.",
+                'publish_date' => $publishDate6->format('Y-m-d H:i:s'),
+                'price' => 100.900,
+                'rating' => 4.7,
+                'tutor' => 'Maya Rodriguez'
             ],
         ]);
     }
