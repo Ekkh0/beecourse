@@ -1,5 +1,9 @@
 @extends('layout.mainlayout')
 @section('title')Login & Register @endsection
+@section('extracss')
+<script src="js/login.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+@endsection
 @section('content')
 <body>
 	<div class="section">
@@ -117,4 +121,7 @@
 	    </div>
 	</div>
 </body>
+@endsection
+@section('extrajs')
+<link rel="stylesheet" href="css/login.css">
 @endsection
