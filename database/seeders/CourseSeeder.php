@@ -59,7 +59,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'name' => 'Machine Learning & Generative AI',
-                'description' => "Explore the future of technology in our Machine Learning & Generative AI course. Master the principles of machine learning and delve into creative AI solutions. Whether you're a beginner or seeking advanced skills, join us to navigate and harness the power of these cutting-edge technologies.",
+                'description' => "Explore the future of technology in our Machine Learning & Generative AI course. Master the principles of machine learning and delve into creative AI solutions.",
                 'publish_date' => $publishDate5->format('Y-m-d H:i:s'),
                 'price' => 80.700,
                 'rating' => 4.4,
@@ -67,7 +67,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'name' => 'Python for Data Science',
-                'description' => "Unlock the power of Python for Data Science in our comprehensive course. Dive into the world of data analysis, visualization, and manipulation using Python. Whether you're a beginner or looking to enhance your skills, this course provides hands-on experience with Python's data science libraries and tools. Join us to acquire the essential skills for extracting meaningful insights from data and making informed decisions in the dynamic field of Data Science.",
+                'description' => "Unlock the power of Python for Data Science in our comprehensive course. Dive into the world of data analysis, visualization, and manipulation using Python.",
                 'publish_date' => $publishDate6->format('Y-m-d H:i:s'),
                 'price' => 100.900,
                 'rating' => 4.7,
