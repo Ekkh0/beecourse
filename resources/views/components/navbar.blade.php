@@ -35,6 +35,10 @@
                 <i class="input-icon"><iconify-icon icon="uil:search"></iconify-icon></i>
                 <button class="btn btn-outline-success" type="submit" style="margin-left: 12px">Search</button>
             </form>
+            <a class="nav-link" href="/cart" style="display: flex; align-items:center;">
+                <iconify-icon icon="uil:cart" style="font-size: 24px; margin-left: 20px"></iconify-icon>
+                Cart
+            </a>
 
             <ul class="navbar-nav ms-auto" style="margin-right: 24px">
                 <li class="nav-item">

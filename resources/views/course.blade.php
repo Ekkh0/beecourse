@@ -35,9 +35,21 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="card-body">
+                        <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
                             <a href="nlp" class="btn btn-primary">Detail</a>
+                            @php
+                                $cart = session('cart', []);
+                            @endphp
+                            @if(isset($cart[$course->id]))
+                                <span class="btn btn-success disabled">Added to Cart</span>
+                            @else
+                                <form action="{{ route('cart.addToCart', ['courseId' => $course->id]) }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                </form>
+                            @endif
                         </div>
+                        
                     </div>
                 </div>
                 @endforeach
