@@ -82,63 +82,72 @@ class ContentSeeder extends Seeder
 
             [
                 'course_id' => 4,
-                'course_url' => 'https://www.youtube.com/watch?v=6M5VXKLf4D4',
+                'title_content' => 'Deep Learning | What is Deep Learning? | Deep Learning Tutorial For Beginners',
+                'course_url' => 'https://www.youtube.com/embed/6M5VXKLf4D4?si=eC5fG7R3_A-2lu_O',
                 'duration' => 6,
                 'description' => "In this tutorial video, we will learn that Deep learning is a branch of machine learning that uses artificial neural networks to learn and make predictions without explicit programming. It mimics the human brain's learning process, extracting complex patterns from data. Key applications include image and speech recognition, natural language processing, and advancements in areas like computer vision and healthcare."
             ],
 
             [
                 'course_id' => 4,
-                'course_url' => 'https://www.youtube.com/watch?v=oJNHXPs0XDk',
+                'title_content' => 'Neural Network Architectures & Deep Learning',
+                'course_url' => 'https://www.youtube.com/embed/oJNHXPs0XDk?si=l0OzyL73aPhp9Wa6',
                 'duration' => 9,
                 'description' => "What is neural network? Why are there many variety of neural network architectures? Learn about neural network architectures and when each variety of architecture is best used on a specific problem in this video!"
             ],
 
             [
                 'course_id' => 4,
-                'course_url' => 'https://www.youtube.com/watch?v=6_2hzRopPbQ',
+                'title_content' => 'Tensorflow Tutorial for Python in 10 Minutes',
+                'course_url' => 'https://www.youtube.com/embed/6_2hzRopPbQ?si=z9Ni_GikEILx76h0',
                 'duration' => 12,
                 'description' => "In this video, we will learn how to create a artificial neural network using tensorflow and keras library. Learn how to use each library to later be able to create your veery own tensorflow model by the end of this tutorial video."
             ],
 
             [
                 'course_id' => 5,
-                'course_url' => 'https://www.youtube.com/watch?v=4RixMPF4xis&t=8s',
+                'title_content' => 'AI vs Machine Learning',
+                'course_url' => 'https://www.youtube.com/embed/4RixMPF4xis?si=uTsAYYOcmwaTK-vh',
                 'duration' => 6,
                 'description' => "Demystify the distinctions between Artificial Intelligence (AI) and Machine Learning (ML) in our latest video. Are they truly synonymous? Join us as we unravel the intricacies of their relationship and explore related topics such as Deep Learning (DL). Gain clarity on the various types and properties of AI and ML. Watch now for a comprehensive understanding of these transformative technologies!"
             ],
 
             [
                 'course_id' => 5,
-                'course_url' => 'https://www.youtube.com/watch?v=pWNAtUwnBS8',
+                'title_content' => 'What is generative AI?',
+                'course_url' => 'https://www.youtube.com/embed/pWNAtUwnBS8?si=hRH7IHqoCJmLIz7r',
                 'duration' => 2,
                 'description' => "What is generative AI? What impacts does it leaves in our world? Learn all about generative AI in this short video to help enhances your understanding about generative AI!"
             ],
 
             [
                 'course_id' => 5,
-                'course_url' => 'https://www.youtube.com/watch?v=hfIUstzHs9A',
+                'title_content' => 'What are Generative AI models?',
+                'course_url' => 'https://www.youtube.com/embed/hfIUstzHs9A?si=VRn-OPbdwCGmEgRv',
                 'duration' => 9,
                 'description' => "Dive into the fascinating realm of Generative AI! Uncover the magic behind realistic image, code, and dialogue creation. In this video, we demystify the workings of large language models, showcasing their potential to revolutionize enterprise operations. Discover the incredible capabilities of generative AI and its transformative impact on various industries. Watch now to unravel the secrets and possibilities within this cutting-edge technology"
             ],
 
             [
                 'course_id' => 6,
-                'course_url' => 'https://www.youtube.com/watch?v=xC-c7E5PK0Y',
+                'title_content' => 'What REALLY is Data Science? Told by a Data Scientist',
+                'course_url' => 'https://www.youtube.com/embed/xC-c7E5PK0Y?si=iBF93GCeO4teciSl',
                 'duration' => 11,
                 'description' => "What is data science? What kind of impacts does it makes? In this educational video, we will find out about the fundamental principles, methodologies, and real-life application of data science."
             ],
 
             [
                 'course_id' => 6,
-                'course_url' => 'https://www.youtube.com/watch?v=SUsfmh2BSbg',
+                'title_content' => 'Data Science With Python | Data Science Tutorial',
+                'course_url' => 'https://www.youtube.com/embed/SUsfmh2BSbg?si=x8Ko_doilmCp2LE5',
                 'duration' => 8,
                 'description' => "The Data Science with Python course is meticulously crafted to provide participants with a profound understanding of the diverse libraries and packages essential for executing tasks such as data analysis, data visualization, web scraping, machine learning, and natural language processing using Python. Engage in real-life projects, assignments, demos, and case studies, ensuring a hands-on and practical learning experience throughout the course."
             ],
 
             [
                 'course_id' => 6,
-                'course_url' => 'https://www.youtube.com/watch?v=jNeUBWrrRsQ',
+                'title_content' => 'Data Science Tutorial | Data Science for Beginners | Data Science with Python Tutorial',
+                'course_url' => 'https://www.youtube.com/embed/jNeUBWrrRsQ?si=3tmhoyddcaR5gvPF',
                 'duration' => 44,
                 'description' => "In this video, we will dive into the world of a data scientists, learning the skills needed to be a data scientist. By the end of this video, you will be able to create a model that will be able to deal with datas and learning the insights of the datas."
             ],
