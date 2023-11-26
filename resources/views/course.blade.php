@@ -1,12 +1,26 @@
 @extends('layout.contentlayout')
 @section('titletitle')Courses @endsection
 
+@section('titletitle')
+    @if(isset($results) && $results->count() > 0)
+        Search Results
+    @else
+        Courses
+    @endif
+@endsection
+
 @section('contentcontent')
     <div class="container mt-5">
-        <h2 class="mb-4">Popular Topics</h2>
+        <h2 class="mb-4">
+            @if(isset($results) && $results->count() > 0 || isset($courses) && $courses->count() > 0)
+                Search Results
+            @else
+                Popular Topics
+            @endif
+        </h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
-            @foreach($courses as $course)
+            @forelse($results ?? $courses ?? [] as $course)
                 <div class="col">
                     <div class="card h-100">
                         <img src="image/nlp.jpg" class="card-img-top" alt="..."
@@ -53,11 +67,19 @@
 
                     </div>
                 </div>
-                @endforeach
-            </div>
+            @empty
+                <p>No courses found</p>
+            @endforelse
+
         </div>
-        <span class="pt-3" style="display: flex; justify-content: center">
-            {{ $courses->links('pagination::bootstrap-4') }}
-        </span>
     </div>
+    <span class="pt-3" style="display: flex; justify-content: center">
+    @if(isset($results) && $results->count() > 0)
+        {{ $results->links('pagination::bootstrap-4') }}
+    @elseif(isset($courses) && $courses->count() > 0)
+        {{ $courses->links('pagination::bootstrap-4') }}
+    @else
+
+    @endif
+</span>
 @endsection
