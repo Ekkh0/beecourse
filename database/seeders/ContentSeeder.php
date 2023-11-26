@@ -82,7 +82,7 @@ class ContentSeeder extends Seeder
 
             [
                 'course_id' => 4,
-                'title_content' => 'Deep Learning | What is Deep Learning? | Deep Learning Tutorial For Beginners',
+                'title_content' => 'Deep Learning | What is Deep Learning? | Deep Learning Tutorial For Beginners ',
                 'course_url' => 'https://www.youtube.com/embed/6M5VXKLf4D4?si=eC5fG7R3_A-2lu_O',
                 'duration' => 6,
                 'description' => "In this tutorial video, we will learn that Deep learning is a branch of machine learning that uses artificial neural networks to learn and make predictions without explicit programming. It mimics the human brain's learning process, extracting complex patterns from data. Key applications include image and speech recognition, natural language processing, and advancements in areas like computer vision and healthcare."
