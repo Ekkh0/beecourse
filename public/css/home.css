@@ -63,7 +63,7 @@ body{
     }
 }
 
-ul{
+.navbar-nav{
     height: 100%;
 }
 
@@ -116,8 +116,12 @@ ul{
     color: #ffeba7 !important;
 }
 
-a:hover{
-    font-weight: 700;
+.nav-link.active:hover{
+    text-shadow: 0 0 3px #ffeba7;
+}
+
+.nav-link:hover{
+    text-shadow: 0 0 3px #c4c3ca;
 }
 
 .input-icon {
