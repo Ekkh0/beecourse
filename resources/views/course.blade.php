@@ -8,34 +8,40 @@
 
             @foreach($courses as $course)
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 course-card">
                         <img src="image/nlp.jpg" class="card-img-top" alt="..."
                             style="width: 100%; height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$course->name}}</h5>
-                            <p class="card-text course-descriptor">{{$course->description}}</p>
+                        <div class="card-body course-title-card">
+                            <div class="title_desc" style="width: 65%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 10px;">
+                                <h5 class="course-card-title">
+                                    <div class="course-title shortened">
+                                        {{$course->name}}
+                                    </div>
+                                </h5>
+                                <p class="card-text course-descriptor">{{$course->description}}</p>
+                            </div>
+                            <div class="rating" style="width: 35%;">
+                                <span class="badge bg-primary rating-container">
+                                    <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
+                                    {{$course->rating}}
+                                </span>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                        <ul class="list-group list-group-flush"">
+                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039; border-color: #102770;">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="badge bg-primary"><i class="bi bi-star"></i> 4.7</span>
-                                    <span class="text-muted">Average Rating</span>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted">Price:</span>
+                                    <span class="text-muted" style="color: #102770 !important">Price:</span>
                                     <span class="text-success">${{$course->price}}</span>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted">Tutor:</span>
-                                    <span>John Doe</span>
+                                    <span class="text-muted" style="color: #102770 !important">Tutor:</span>
+                                    <span>{{$course->tutor}}</span>
                                 </div>
                             </li>
                         </ul>
-                        <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="card-body" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(248, 249, 250, 0.65);">
                             <a href="{{route('clustering-classification-content', $course->id)}}" class="btn btn-primary">Detail</a>
                             @php
                                 $cart = session('cart', []);
@@ -50,7 +56,6 @@
                             @endif
 
                         </div>
-
                     </div>
                 </div>
                 @endforeach

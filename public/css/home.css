@@ -53,6 +53,33 @@ body{
     text-overflow: ellipsis;
 }
 
+/* .course-card-title{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+}
+
+.course-title{
+    min-width: 100%;
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(0);
+    -webkit-transition: 3.3s;
+    -moz-transition: 3.3s;
+    transition: 3.3s;     
+    
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.course-title:hover{
+    transform: translateX(calc(269.65px - 101%));
+} */
+
 @media(min-width: 1280px){
     .container-fluid{
         height: 70px !important;
@@ -180,7 +207,7 @@ body{
 }
 
 .btn{
-    border-radius: 4px;
+  border-radius: 4px;
   height: 44px;
   font-size: 13px;
   font-weight: 600;
@@ -224,4 +251,155 @@ body{
 footer{
     background-color: #2a2b38 !important;
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+}
+
+.scroller__wrapper {
+    /* How long one slide is visible on screen (from entering screen to leaving it) */
+    --scrolling-gallery-item-duration: 30s;
+    /* How many items we want to see on screen at once */
+    --scrolling-gallery-items-visible: 3;
+    /* How many items are to scroll */
+    --scrolling-gallery-items-total: 6;
+    margin-top: 2.25em;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.scroller {
+    animation-duration: calc(var(--scrolling-gallery-item-duration, 1s) / var(--scrolling-gallery-items-visible) * var(--scrolling-gallery-items-total));
+    animation-timing-function: linear;
+    animation-name: scrolling-gallery;
+    animation-iteration-count: infinite;
+    display: flex;
+    white-space: nowrap;
+}
+
+.scroller__container {
+    /* Without this, scroll will jump on desktop if any vertical scrollbar is shown */
+    width: 100vw;
+}
+
+.scroller__item {
+    flex: 1 0 calc(100% / var(--scrolling-gallery-items-visible));
+    /* Without this, block elements will take width from their contents and thus making wrong calculations,
+        so this just force elements to take only exact part of the container (screen) and equal for all */
+    width: 0px;
+    /* If you want to have it continuous without any spaces, remove two lines below */
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+.scroller img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+@keyframes scrolling-gallery {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(calc(var(--scrolling-gallery-items-total) * -100vw / var(--scrolling-gallery-items-visible)));
+}
+}
+
+.scroller:hover,
+.scroller:focus {
+    animation-play-state: paused;
+}
+
+
+/* Styles only for switching */
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    align-items: center;
+    background-color: rgba(0, 192, 0, 1);
+    cursor: pointer;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    min-width: 2em;
+    padding: 0.5em;
+}
+
+.scroller-vignette-left{
+    position: absolute;
+    width: 4%;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+    overflow:hidden;
+    box-shadow: 50px 0 15px -10px white inset;
+    z-index: 5;
+}
+
+.scroller-vignette-right{
+    position: absolute;
+    width: 4%;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+    right: 0;
+    overflow:hidden;
+    box-shadow: -50px 0 15px -10px white inset;
+    z-index: 5;
+}
+
+.rating-container{
+    width: 100%; 
+    height: 100%; 
+    font-size: 22px; 
+    padding: 0 !important; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    color: #ffeba7;
+    background-color: #102770 !important;
+    border-radius: 0;
+    position: relative;
+    padding-left: 30px !important;
+    overflow: hidden;
+}
+
+.rating-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 83.5px solid #f8f9fa;
+    border-right: 40px solid transparent;
+    width: 0;
+}
+
+.course-card{
+    background-color: #f8f9fa; 
+    color: #152039; 
+    border-color: #102770; 
+    background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2148997883.jpg?w=2000&t=st=1701163012~exp=1701163612~hmac=453be9e879b272c32288abff82055a3e5c61d76e4fd681c0a986c2081b059f34');
+    background-position: bottom center;
+    background-size: 100%;
+}
+
+.course-title-card{
+    background-color: #f8f9fa; 
+    color: #152039; 
+    border-color: #102770;
+    display: flex; 
+    padding: 0;
+}
+
+.shortened{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

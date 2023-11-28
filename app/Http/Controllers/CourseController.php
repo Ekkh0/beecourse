@@ -8,7 +8,7 @@ use App\Models\Course;
 class CourseController extends Controller
 {
     public function index(){
-        $courses = Course::paginate(3);
+        $courses = Course::paginate(6);
         return view("home", ["courses"=>$courses]);
     }
 

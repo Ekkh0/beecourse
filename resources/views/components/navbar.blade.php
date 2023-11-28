@@ -36,9 +36,9 @@
                 <button class="btn btn-outline-success" type="submit" style="margin-left: 12px">Search</button>
             </form>
 
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" style="margin-left: 24px">
                 <a class="nav-link" href="/cart" style="display: flex; align-items:center;">
-                    <iconify-icon icon="uil:cart" style="font-size: 24px; margin-left: 8px"></iconify-icon>
+                    <iconify-icon icon="uil:cart" style="font-size: 24px; margin-right: 8px"></iconify-icon>
                     Cart
                 </a>
             </ul>
