@@ -30,8 +30,8 @@
                 </li>
             </ul>
             
-            <form class="d-flex" role="search" style="position: relative; align-items: center">
-                <input class="beesearchbar" type="search" placeholder="Search" aria-label="Search" style="width: 500px;">
+            <form class="d-flex" role="search" style="position: relative; align-items: center" action="{{ url('/search') }}" method="GET">
+                <input class="beesearchbar" type="search" name="query" placeholder="Search" aria-label="Search" style="width: 500px;">
                 <i class="input-icon"><iconify-icon icon="uil:search"></iconify-icon></i>
                 <button class="btn btn-outline-success" type="submit" style="margin-left: 12px">Search</button>
             </form>
