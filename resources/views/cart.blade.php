@@ -44,12 +44,12 @@
 
                                 {{-- <a href="terms" id="showTermsLink" style="text-decoration: none;">Click Here to Read the Terms & Conditions!</a> --}}
 
-                                <div class="form-check" id="showTermsLink">
+                                <div class="form-check" id="showTermsLink" style="padding: none">
                                     <input type="checkbox" class="form-check-input" id="agreeCheckbox">
-                                    <label class="form-check-label" for="agreeCheckbox">I agree to the Terms and Conditions</label>
+                                    <p style="margin-top: 16px">I agree to the Terms and Conditions</p>
                                 </div>
 
-                                    <form action="{{route('checkout')}}" method="POST" id="checkoutForm">
+                                    <form action="{{route('checkout')}}" method="POST" id="checkoutForm" sr>
                                         @csrf
 
                                             @foreach ($cart as $courseId => $item)
@@ -61,7 +61,7 @@
                                                 </div>
                                             @endforeach
 
-                                        <button type="submit" class="btn mt-3" style="background-color: rgb(57, 57, 57); color:white;" disabled id="checkoutButton">Checkout</button>
+                                        <button type="submit" class="btn mt-3" style="background-color: rgb(57, 57, 57); color:white; margin: none !important;" disabled id="checkoutButton">Checkout</button>
 
 
 
