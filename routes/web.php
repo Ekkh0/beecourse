@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Searchcont;
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\checkoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,5 +57,9 @@ Route::get('/clustering-classification', [DetailCourseController::class, 'index'
 
 
 Route::get('/clustering-classification-content/{id}', [DetailCourseController::class, 'showContent'])->name('clustering-classification-content');
+Route::post('/checkout', [CheckoutController::class,'checkout'])->name('checkout');
+Route::get('/terms', function () {
+    return view('terms');
+});
 
 // Route::get('/clustering-classification-content/{id}', [DetailCourseController::class,'pagecontents'])->name('clustering-classification-content');

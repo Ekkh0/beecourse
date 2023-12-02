@@ -105,9 +105,10 @@ Clustering & Classification With Machine Learning In Python
                                     <div class="card h-100">
 
                                         {{-- lagi coba masukin youtube video yang autoplay --}}
-                                        
+
                                        {{-- <iframe src="{{$content->course_url}}" frameborder="0"></iframe> --}}
-                                       {{-- <p><iframe width="560" height="315" src="https://www.youtube.com/embed/wpdU7ucBfqhRsVA_" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">youtube embed code</a> and <a href="https://allabeviljas.se/lumify/">lumify lån</a></iframe></p> --}}
+
+                                       <p><iframe width="850" height="315" src="{{$content->course_url}}" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">youtube embed code</a> and <a href="https://allabeviljas.se/lumify/">lumify lån</a></iframe></p>
 
 
                                         <div class="card-body">

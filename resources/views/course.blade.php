@@ -61,7 +61,11 @@
                             @else
                                 <form action="{{ route('cart.addToCart', ['courseId' => $course->id]) }}" method="post">
                                     @csrf
+                                    @if(Auth::check())
                                     <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                    @else
+                                    <a href="/register" class="btn btn-primary">Add to Cart</a>
+                                    @endif
                                 </form>
                             @endif
 
