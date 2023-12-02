@@ -10,7 +10,7 @@
         padding-top: 67px;
     }
 </style>
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="\css\home.css">
 @yield('extraextracss')
 @endsection
 

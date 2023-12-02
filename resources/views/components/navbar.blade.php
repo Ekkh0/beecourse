@@ -3,7 +3,7 @@
         <div class="navbar-brand logodiagonalbackground">
             <a class="fs-3 beelogo" href="/">
                 <div class="beelogobackground"></div>
-                <img src="image/logo.png" alt="" style="width: 200px">
+                <img src="/image/logo.png" alt="" style="width: 200px">
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -19,8 +19,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <div class="menudiagonalbackground {{ Request::is('Courses')? 'active': '' }}">
-                        <a class="nav-link {{ Request::is('Courses')? 'active': '' }}" href="Courses">Courses</a>
+                    <div class="menudiagonalbackground {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}">
+                        <a class="nav-link {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}" href="Courses">Courses</a>
                     </div>
                 </li>
                 <li class="nav-item">

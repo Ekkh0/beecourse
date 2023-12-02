@@ -12,11 +12,7 @@
 @section('contentcontent')
     <div class="container mt-5">
         <h2 class="mb-4">
-            @if(isset($results) && $results->count() > 0 || isset($courses) && $courses->count() > 0)
-                Search Results
-            @else
-                Popular Topics
-            @endif
+            {{ Request::is('Courses')? 'Popular Topics': 'Search Results' }}
         </h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
