@@ -12,11 +12,7 @@
 @section('contentcontent')
     <div class="container mt-5">
         <h2 class="mb-4">
-            @if(isset($results) && $results->count() > 0 || isset($courses) && $courses->count() > 0)
-                Search Results
-            @else
-                Popular Topics
-            @endif
+            {{ Request::is('Courses')? 'Popular Topics': 'Search Results' }}
         </h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
@@ -56,7 +52,7 @@
                             </li>
                         </ul>
                         <div class="card-body" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(248, 249, 250, 0.65);">
-                            <a href="{{route('clustering-classification-content', $course->id)}}" class="btn btn-primary">Detail</a>
+                            <a href="{{route('courses.getDetail', $course->id)}}" class="btn btn-primary">Detail</a>
                             @php
                                 $cart = session('cart', []);
                             @endphp
@@ -65,7 +61,11 @@
                             @else
                                 <form action="{{ route('cart.addToCart', ['courseId' => $course->id]) }}" method="post">
                                     @csrf
+                                    @if(Auth::check())
                                     <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                    @else
+                                    <a href="/register" class="btn btn-primary">Add to Cart</a>
+                                    @endif
                                 </form>
                             @endif
 

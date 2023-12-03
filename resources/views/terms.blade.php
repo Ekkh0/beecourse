@@ -42,6 +42,22 @@
 
                 <button type="button" class="btn btn-primary mt-3" onclick="submitForm()">Submit</button>
 
+                <script>
+                    function submitForm() {
+                        var agreeCheckbox = document.getElementById('agreeCheckbox');
+
+                        if (agreeCheckbox.checked) {
+                            // If checkbox is checked, proceed with the form submission or any other action
+                            // For example, you can redirect to the cart page
+                            window.location.href = 'cart';
+
+                        } else {
+                            alert('Please agree to the Terms and Conditions before submitting.');
+                        }
+                    }
+                </script>
+
+
                 <p>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of
                     the terms, then you may not access the Service.</p>
 

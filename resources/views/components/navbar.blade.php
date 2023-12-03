@@ -3,7 +3,7 @@
         <div class="navbar-brand logodiagonalbackground">
             <a class="fs-3 beelogo" href="/">
                 <div class="beelogobackground"></div>
-                <img src="image/logo.png" alt="" style="width: 200px">
+                <img src="/image/logo.png" alt="" style="width: 200px">
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -19,29 +19,35 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <div class="menudiagonalbackground {{ Request::is('Courses')? 'active': '' }}">
-                        <a class="nav-link {{ Request::is('Courses')? 'active': '' }}" href="Courses">Courses</a>
+                    <div class="menudiagonalbackground {{ Request::is('Courses') || Request::is('search') || Request::is('Courses.detail') ? 'active': '' }}">
+                        <a class="nav-link {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}" href="/Courses">Courses</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <div class="menudiagonalbackground {{ Request::is('About')? 'active': '' }}">
-                        <a class="nav-link {{ Request::is('About')? 'active': '' }}" href="About">About</a>
+                        <a class="nav-link {{ Request::is('About')? 'active': '' }}" href="/About">About</a>
                     </div>
                 </li>
             </ul>
-            
+
             <form class="d-flex" role="search" style="position: relative; align-items: center" action="{{ url('/search') }}" method="GET">
                 <input class="beesearchbar" type="search" name="query" placeholder="Search" aria-label="Search" style="width: 500px;">
+
                 <i class="input-icon"><iconify-icon icon="uil:search"></iconify-icon></i>
                 <button class="btn btn-outline-success" type="submit" style="margin-left: 12px">Search</button>
             </form>
 
             <ul class="navbar-nav" style="margin-left: 24px">
-                <a class="nav-link" href="/cart" style="display: flex; align-items:center;">
+                <a class="nav-link" href=" @if(Auth::check())
+                /cart
+                @else
+                /register
+                @endif" style="display: flex; align-items:center;">
                     <iconify-icon icon="uil:cart" style="font-size: 24px; margin-right: 8px"></iconify-icon>
                     Cart
                 </a>
             </ul>
+
 
             <ul class="navbar-nav ms-auto" style="margin-right: 24px">
                 <li class="nav-item">

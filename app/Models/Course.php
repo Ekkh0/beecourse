@@ -24,7 +24,7 @@ class Course extends Model
     }
 
 
-    public function transaction(){
-        return $this->hasMany(Transaction::class);
+    public function transaction():HasMany{
+        return $this->hasMany(Transaction::class,'course_id', 'id');
     }
 }
