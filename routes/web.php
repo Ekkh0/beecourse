@@ -53,6 +53,7 @@ Route::get('/cart/delete/{courseId}', [CartController::class, 'delete'])->name('
 Route::get('/search', [Searchcont::class, 'search']);
 
 
+Route::get('/courses/{id}', [DetailCourseController::class, 'showDetail'])->name('courses-detail');
 Route::get('/clustering-classification', [DetailCourseController::class, 'index'])->name('clustering-classification');
 
 

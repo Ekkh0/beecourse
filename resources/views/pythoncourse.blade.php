@@ -1,6 +1,6 @@
 @extends('layout.contentlayout')
 @section('titletitle')
-Clustering & Classification With Machine Learning In Python
+    Clustering & Classification With Machine Learning In Python
 @endsection
 
 @section('extraextracss')
@@ -33,7 +33,7 @@ Clustering & Classification With Machine Learning In Python
         <div class="row">
             <div class="col-md-8">
                 <!-- Header Card -->
-                <div class="card header-card">
+                {{-- <div class="card header-card">
                     <div class="card-body">
                         <h2 class="card-title">Clustering & Classification With Machine Learning In Python</h2>
                         <p class="card-text">Harness The Power Of Machine Learning For Unsupervised & Supervised Learning In
@@ -41,7 +41,18 @@ Clustering & Classification With Machine Learning In Python
                         <p class="card-text"><strong>Instructor:</strong> John Doe</p>
                         <p class="card-text"><strong>Price:</strong> $99.99</p>
                     </div>
+                </div> --}}
+
+
+                <div class="card header-card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ $course->name }}</h2>
+                        <p class="card-text">{{ $course->description }}</p>
+                        <p class="card-text"><strong>Instructor:</strong> {{ $course->tutor }}</p>
+                        <p class="card-text"><strong>Price:</strong> {{ $course->price }}</p>
+                    </div>
                 </div>
+
 
                 <!-- What You Will Learn -->
                 <div class="card mt-4">
@@ -88,68 +99,64 @@ Clustering & Classification With Machine Learning In Python
 
                 <div class="course-content">
 
-                    @foreach ($content as $data)
 
-                        {{-- ID name {{$data->name}} --}}
-                        {{-- <br> --}}
-
-                        @foreach ($data->content as $content)
+                    {{-- ID name {{$data->name}} --}}
+                    {{-- <br> --}}
 
 
+                    {{-- {{$content->course_id}} --}}
+                    {{-- {{$content->course_url}} --}}
 
-                            {{-- {{$content->course_id}} --}}
-                            {{-- {{$content->course_url}} --}}
+                    <div class="testing">
+                        <div class="col">
+                            <div class="card h-100">
 
-                            <div class="testing">
-                                <div class="col">
-                                    <div class="card h-100">
+                                {{-- lagi coba masukin youtube video yang autoplay --}}
 
-                                        {{-- lagi coba masukin youtube video yang autoplay --}}
+                                {{-- <iframe src="{{$content->course_url}}" frameborder="0"></iframe> --}}
 
-                                       {{-- <iframe src="{{$content->course_url}}" frameborder="0"></iframe> --}}
-
-                                       <p><iframe width="850" height="315" src="{{$content->course_url}}" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">youtube embed code</a> and <a href="https://allabeviljas.se/lumify/">lumify lån</a></iframe></p>
-
-
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{$content->description}}</h5>
-                                            <p class="card-text course-descriptor">{{$content->duration}}</p>
-                                        </div>
-
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="badge bg-primary"><i class="bi bi-star"></i> 4.7</span>
-                                                    <span class="text-muted">Average Rating</span>
-                                                </div>
-                                            </li>
-
-                                            <li class="list-group-item">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="text-muted">Price:</span>
-                                                    <span class="text-success">${{$content->course_id}}</span>
-                                                </div>
-                                            </li>
-
-                                            <li class="list-group-item">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="text-muted">Tutor:</span>
-                                                    <span>John Doe</span>
-                                                </div>
-                                            </li>
-
-                                        </ul>
+                                <p><iframe width="850" height="315" src="{{ $content->course_url }}" title=""
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">youtube embed
+                                            code</a> and <a href="https://allabeviljas.se/lumify/">lumify lån</a></iframe>
+                                </p>
 
 
-                                    </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $content->description }}</h5>
+                                    <p class="card-text course-descriptor">{{ $content->duration }}</p>
                                 </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-primary"><i class="bi bi-star"></i> 4.7</span>
+                                            <span class="text-muted">Average Rating</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-muted">Price:</span>
+                                            <span class="text-success">${{ $content->course_id }}</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-muted">Tutor:</span>
+                                            <span>John Doe</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+
                             </div>
+                        </div>
+                    </div>
 
-
-                        @endforeach
-
-
-                    @endforeach
 
 
 

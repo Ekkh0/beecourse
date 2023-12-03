@@ -8,6 +8,7 @@ use App\Models\Course;
 
 class DetailCourseController extends Controller
 {
+
     public function index(){
         $datas = Course::all();
         return view("pythoncourse",compact("datas"));
@@ -18,6 +19,11 @@ class DetailCourseController extends Controller
         // $content = Course::paginate(9);
         return view("pythoncourse",compact("content"));
 
+    }
+
+    public function showDetail($id){
+        $course =  Course::where('id', $id)->get();
+        return view("pythoncourse",  ["course"=>$course]);
     }
 
     // public function pagecontents(){
