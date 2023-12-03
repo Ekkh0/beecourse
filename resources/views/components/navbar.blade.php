@@ -19,13 +19,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <div class="menudiagonalbackground {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}">
-                        <a class="nav-link {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}" href="Courses">Courses</a>
+                    <div class="menudiagonalbackground {{ Request::is('Courses') || Request::is('search') || Request::is('Courses.detail') ? 'active': '' }}">
+                        <a class="nav-link {{ Request::is('Courses') || Request::is('search') ? 'active': '' }}" href="/Courses">Courses</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <div class="menudiagonalbackground {{ Request::is('About')? 'active': '' }}">
-                        <a class="nav-link {{ Request::is('About')? 'active': '' }}" href="About">About</a>
+                        <a class="nav-link {{ Request::is('About')? 'active': '' }}" href="/About">About</a>
                     </div>
                 </li>
             </ul>

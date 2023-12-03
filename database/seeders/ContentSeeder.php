@@ -162,6 +162,54 @@ class ContentSeeder extends Seeder
                 'description' => "In this video, we will dive into the world of a data scientists, learning the skills needed to be a data scientist. By the end of this video, you will be able to create a model that will be able to deal with datas and learning the insights of the datas."
             ],
 
+            [
+                'course_id' => 7,
+                'title_content' => 'Basic English Conversation',
+                'course_url' => 'https://www.youtube.com/embed/WvTsWtBlaAE?si=BwX-5upqp3NcwLyw',
+                'duration' => 26,
+                'description' => "In this video, you will learn about basic conversation with people using english. By the end of this video session, you will be able to answer questions and have a conversation with people."
+            ],
+
+            [
+                'course_id' => 7,
+                'title_content' => 'Improve your English Grammar in One Hour | Basic English Grammar',
+                'course_url' => 'https://www.youtube.com/embed/QXVzmzhxWWc?si=7XZHguk3Itobh88h',
+                'duration' => 63,
+                'description' => "What are grammars? How do we use the correct grammar in a sentence? After learning from this video, you will get knowledge about what kinds of grammar to use depending on the situation you are in."
+            ],
+
+            [
+                'course_id' => 8,
+                'title_content' => 'Learn Chinese in 30 Minutes - ALL the Basics You Need',
+                'course_url' => 'https://www.youtube.com/embed/QOpQf3fi2N4?si=H6acz4HTcJpNI0Du',
+                'duration' => 27,
+                'description' => "In this video, you will be able to start learning chinese with the key points of Chinese grammar."
+            ],
+
+            [
+                'course_id' => 8,
+                'title_content' => '15 Chinese Phrases that Natives use ALL THE TIME',
+                'course_url' => 'https://www.youtube.com/embed/eNv8saOz1Qk?si=giFCbTYw4hDHJoqj',
+                'duration' => 8,
+                'description' => "What do chinese people normally say to have conversation to other people? After watching this video, you will be able to have simple conversations using chinese."
+            ],
+
+            [
+                'course_id' => 9,
+                'title_content' => 'C Programming Tutorial 1 - Intro to C',
+                'course_url' => 'https://www.youtube.com/embed/CPjZKsUYSXg?si=bk7BeUyOwkvLUgY2',
+                'duration' => 6,
+                'description' => "In this educational video, you will learn about what C language is used for and how to write the code in C language."
+            ],
+
+            [
+                'course_id' => 9,
+                'title_content' => 'C Programming Tutorial for Beginners',
+                'course_url' => 'https://www.youtube.com/embed/KJgsSFOSQv0?si=CxvRVJMM9G9_5eKp',
+                'duration' => 226,
+                'description' => "
+                Embark on a comprehensive learning journey with this engaging course, meticulously designed to provide beginners with a thorough and in-depth introduction to the fundamental concepts that underpin the C programming language, ensuring a solid foundation for your coding endeavors."
+            ],
         ]);
     }
 }

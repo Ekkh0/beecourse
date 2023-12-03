@@ -52,7 +52,7 @@
                             </li>
                         </ul>
                         <div class="card-body" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(248, 249, 250, 0.65);">
-                            <a href="{{route('clustering-classification-content', $course->id)}}" class="btn btn-primary">Detail</a>
+                            <a href="{{route('courses.getDetail', $course->id)}}" class="btn btn-primary">Detail</a>
                             @php
                                 $cart = session('cart', []);
                             @endphp

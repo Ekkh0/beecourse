@@ -23,10 +23,7 @@ use App\Http\Controllers\checkoutController;
 Route::get('/', [CourseController::class,'index'])->name('home');
 Route::get('/Courses', [CourseController::class,'pagecourses'])->name('course');
 Route::get('/About', [CourseController::class,'about'])->name('about');
-
-Route::get('/pythoncourse', function () {
-    return view('pythoncourse');
-});
+Route::get('/Courses/detail/{id}', [CourseController::class, 'detail'])->name('courses.getDetail');
 
 Route::get('/login', [SessionController::class, 'index']);
 Route::get('/logout', [SessionController::class, 'logout']);
@@ -38,13 +35,6 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/account', function () {
-    return view('account');
-});
-
-
-
-
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/add/{courseId}', [CartController::class, 'addToCart'])->name('cart.addToCart');
 Route::post('/cart/add/{courseId}', [CartController::class, 'addToCart']);
@@ -53,10 +43,13 @@ Route::get('/cart/delete/{courseId}', [CartController::class, 'delete'])->name('
 Route::get('/search', [Searchcont::class, 'search']);
 
 
+<<<<<<< HEAD
 Route::get('/courses/{id}', [DetailCourseController::class, 'showDetail'])->name('courses-detail');
 Route::get('/clustering-classification', [DetailCourseController::class, 'index'])->name('clustering-classification');
 
 
+=======
+>>>>>>> 66f927fa92a7895cc5c7e0545400c51af00977f7
 Route::get('/clustering-classification-content/{id}', [DetailCourseController::class, 'showContent'])->name('clustering-classification-content');
 Route::post('/checkout', [CheckoutController::class,'checkout'])->name('checkout');
 Route::get('/terms', function () {
