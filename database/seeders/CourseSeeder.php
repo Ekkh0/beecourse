@@ -23,6 +23,9 @@ class CourseSeeder extends Seeder
         $publishDate4 = Carbon::create(2020, 9, 2, 13, 0, 0);
         $publishDate5 = Carbon::create(2021, 3, 2, 16, 0, 0);
         $publishDate6 = Carbon::create(2020, 12, 7, 14, 0, 0);
+        $publishDate7 = Carbon::create(2022, 12, 7, 14, 0, 0);
+        $publishDate8 = Carbon::create(2019, 12, 7, 14, 0, 0);
+        $publishDate9 = Carbon::create(2022, 11, 7, 14, 0, 0);
 
         DB::table('courses')->insert([
             [
@@ -72,6 +75,30 @@ class CourseSeeder extends Seeder
                 'price' => 100.900,
                 'rating' => 4.7,
                 'tutor' => 'Maya Rodriguez'
+            ],
+            [
+                'name' => 'Basic English for Beginners',
+                'description' => "Learn to be able to use English for simple conversations.",
+                'publish_date' => $publishDate7->format('Y-m-d H:i:s'),
+                'price' => 90.900,
+                'rating' => 4.5,
+                'tutor' => 'Jennifer Parker'
+            ],
+            [
+                'name' => 'Basic Chinese for Beginners',
+                'description' => "Learn to use chinese in daily live.",
+                'publish_date' => $publishDate8->format('Y-m-d H:i:s'),
+                'price' => 95.900,
+                'rating' => 4.4,
+                'tutor' => 'John Brown'
+            ],
+            [
+                'name' => 'Basic C coding',
+                'description' => "By enrolling in this course, you will learn the basics of C language needed to start a small project using C",
+                'publish_date' => $publishDate9->format('Y-m-d H:i:s'),
+                'price' => 100.900,
+                'rating' => 4.8,
+                'tutor' => 'Brown Doe'
             ],
         ]);
     }
