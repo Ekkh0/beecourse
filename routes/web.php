@@ -43,13 +43,10 @@ Route::get('/cart/delete/{courseId}', [CartController::class, 'delete'])->name('
 Route::get('/search', [Searchcont::class, 'search']);
 
 
-<<<<<<< HEAD
 Route::get('/courses/{id}', [DetailCourseController::class, 'showDetail'])->name('courses-detail');
 Route::get('/clustering-classification', [DetailCourseController::class, 'index'])->name('clustering-classification');
 
 
-=======
->>>>>>> 66f927fa92a7895cc5c7e0545400c51af00977f7
 Route::get('/clustering-classification-content/{id}', [DetailCourseController::class, 'showContent'])->name('clustering-classification-content');
 Route::post('/checkout', [CheckoutController::class,'checkout'])->name('checkout');
 Route::get('/terms', function () {
