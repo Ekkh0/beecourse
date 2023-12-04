@@ -34,7 +34,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate1->format('Y-m-d H:i:s'),
                 'price' => 199.900,
                 'rating' => 4.8,
-                'tutor' => 'Emily Johnson'
+                'tutor' => 'Emily Johnson',
+                'image_url' => '/AssetBeeCourse/Clusteringg.jpg'
             ],
             [
                 'name' => 'Introduction to AI, Machine Learning and Python basics',
@@ -42,7 +43,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate2->format('Y-m-d H:i:s'),
                 'price' => 99.900,
                 'rating' => 4.8,
-                'tutor' => 'John Ash'
+                'tutor' => 'John Ash',
+                'image_url' => '/AssetBeeCourse/IntroductionAI.jpg'
             ],
             [
                 'name' => 'The Ultimate Guide to Game Development with Unity (Official)',
@@ -50,7 +52,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate3->format('Y-m-d H:i:s'),
                 'price' => 159.900,
                 'rating' => 4.4,
-                'tutor' => 'Ryan Matthews'
+                'tutor' => 'Ryan Matthews',
+                'image_url' => '/AssetBeeCourse/Gamedev.jpg'
             ],
             [
                 'name' => 'Python for Deep Learning: Build Neural Networks in Python',
@@ -58,7 +61,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate4->format('Y-m-d H:i:s'),
                 'price' => 100.400,
                 'rating' => 4.6,
-                'tutor' => 'Zoe Mitchell'
+                'tutor' => 'Zoe Mitchell',
+                'image_url' => '/AssetBeeCourse/DeepLearning.jpg'
             ],
             [
                 'name' => 'Machine Learning & Generative AI',
@@ -66,7 +70,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate5->format('Y-m-d H:i:s'),
                 'price' => 80.700,
                 'rating' => 4.4,
-                'tutor' => 'Liam Donovan'
+                'tutor' => 'Liam Donovan',
+                'image_url' => '/AssetBeeCourse/MachineLearningGenerativeAI.jpg'
             ],
             [
                 'name' => 'Python for Data Science',
@@ -74,7 +79,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate6->format('Y-m-d H:i:s'),
                 'price' => 100.900,
                 'rating' => 4.7,
-                'tutor' => 'Maya Rodriguez'
+                'tutor' => 'Maya Rodriguez',
+                'image_url' => '/AssetBeeCourse/DataScience.jpg'
             ],
             [
                 'name' => 'Basic English for Beginners',
@@ -82,7 +88,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate7->format('Y-m-d H:i:s'),
                 'price' => 90.900,
                 'rating' => 4.5,
-                'tutor' => 'Jennifer Parker'
+                'tutor' => 'Jennifer Parker',
+                'image_url' => '/AssetBeeCourse/English.jpg'
             ],
             [
                 'name' => 'Basic Chinese for Beginners',
@@ -90,7 +97,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate8->format('Y-m-d H:i:s'),
                 'price' => 95.900,
                 'rating' => 4.4,
-                'tutor' => 'John Brown'
+                'tutor' => 'John Brown',
+                'image_url' => '/AssetBeeCourse/mandarin2.jpg'
             ],
             [
                 'name' => 'Basic C coding',
@@ -98,7 +106,8 @@ class CourseSeeder extends Seeder
                 'publish_date' => $publishDate9->format('Y-m-d H:i:s'),
                 'price' => 100.900,
                 'rating' => 4.8,
-                'tutor' => 'Brown Doe'
+                'tutor' => 'Brown Doe',
+                'image_url' => '/AssetBeeCourse/C.jpg'
             ],
         ]);
     }

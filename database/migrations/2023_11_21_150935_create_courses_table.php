@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('price');
             $table->float('rating');
             $table->string('tutor');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

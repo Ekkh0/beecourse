@@ -1,21 +1,29 @@
 @extends('layout.contentlayout')
-@section('titletitle')Home @endsection
+@section('titletitle')
+    Home
+@endsection
 
 @section('extraextracss')
-<style>
-    .container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-bottom: 50px;
-    }   
-</style>
+    <style>
+        .container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 50px;
+        }
+
+        .carousel-item img {
+            object-fit:fill;
+            width: 1440px;
+            height: 700px;
+        }
+    </style>
 @endsection
 
 @section('contentcontent')
     {{-- Carousel --}}
-    <div id="myCarousel" class="carousel slide">
+    <div id="myCarousel" class="carousel slide" style="height:700px">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -23,44 +31,14 @@
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <h1>Example Headline</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium assumenda quae
-                        necessitatibus unde laudantium quam vel officia. Non cumque voluptatum, assumenda blanditiis ea
-                        numquam exercitationem quo hic perspiciatis quaerat quia amet dolorem et itaque doloribus
-                        placeat fuga. Earum consectetur sapiente obcaecati, similique porro delectus. Eveniet
-                        consequatur animi saepe quibusdam voluptatem.</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
-                </div>
+            <div class="carousel-item active" style="height: 700px">
+                <img src="/Banner/2.png" class="d-block w-100" alt="Image 1">
             </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <h1>Example Headline 2</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium assumenda quae
-                        necessitatibus unde laudantium quam vel officia. Non cumque voluptatum, assumenda blanditiis ea
-                        numquam exercitationem quo hic perspiciatis quaerat quia amet dolorem et itaque doloribus
-                        placeat fuga. Earum consectetur sapiente obcaecati, similique porro delectus. Eveniet
-                        consequatur animi saepe quibusdam voluptatem.</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
-                </div>
+            <div class="carousel-item" style="height: 700px">
+                <img src="/Banner/3.png" class="d-block w-100" alt="Image 2">
             </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <h1>Example Headline 3</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium assumenda quae
-                        necessitatibus unde laudantium quam vel officia. Non cumque voluptatum, assumenda blanditiis ea
-                        numquam exercitationem quo hic perspiciatis quaerat quia amet dolorem et itaque doloribus
-                        placeat fuga. Earum consectetur sapiente obcaecati, similique porro delectus. Eveniet
-                        consequatur animi saepe quibusdam voluptatem.</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
-                </div>
+            <div class="carousel-item" style="height: 700px">
+                <img src="/Banner/4.png" class="d-block w-100" alt="Image 3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -72,6 +50,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
     {{-- End Carousel --}}
 
     {{-- Featured Course --}}
@@ -80,84 +59,90 @@
         <div class="scroller-vignette-left"></div>
         <div class="scroller-vignette-right"></div>
         <div class="scroller__container">
-          <div class="scroller">
-            @foreach($courses as $course)
-                <div class="scroller__item">
-                    <div class="card h-100 course-card">
-                        <img src="image/nlp.jpg" class="card-img-top" alt="..."
-                            style="width: 100%; height: 200px; object-fit: cover;">
-                        <div class="card-body course-title-card">
-                            <div class="title_desc" style="width: 65%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
-                                <h5 class="card-title shortened">{{$course->name}}</h5>
-                                <p class="card-text course-descriptor">{{$course->description}}</p>
-                            </div>
-                            <div class="rating" style="width: 35%;">
-                                <span class="badge bg-primary rating-container">
-                                    <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
-                                    {{$course->rating}}
-                                </span>
-                            </div>
-                        </div>
-                        <ul class="list-group list-group-flush"">
-                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039; border-color: #102770;">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted" style="color: #102770 !important">Price:</span>
-                                    <span class="text-success">${{$course->price}}</span>
+            <div class="scroller">
+                @foreach ($courses as $course)
+                    <div class="scroller__item">
+                        <div class="card h-100 course-card">
+                            <img src="{{ $course->image_url }}" class="card-img-top" alt="..."
+                                style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="card-body course-title-card">
+                                <div class="title_desc"
+                                    style="width: 65%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
+                                    <h5 class="card-title shortened">{{ $course->name }}</h5>
+                                    <p class="card-text course-descriptor">{{ $course->description }}</p>
                                 </div>
-                            </li>
-                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted" style="color: #102770 !important">Tutor:</span>
-                                    <span>{{$course->tutor}}</span>
+                                <div class="rating" style="width: 35%;">
+                                    <span class="badge bg-primary rating-container">
+                                        <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
+                                        {{ $course->rating }}
+                                    </span>
                                 </div>
-                            </li>
-                        </ul>
-                        <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
-                            <a href="nlp" class="btn btn-primary">Detail</a>
+                            </div>
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item"
+                                    style="background-color: rgba(248, 249, 250, 0.65); color: #152039; border-color: #102770;">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted" style="color: #102770 !important">Price:</span>
+                                        <span class="text-success">${{ $course->price }}</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"
+                                    style="background-color: rgba(248, 249, 250, 0.65); color: #152039">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted" style="color: #102770 !important">Tutor:</span>
+                                        <span>{{ $course->tutor }}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
+                                <a href="nlp" class="btn btn-primary">Detail</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
-                @foreach($courses as $course)
-                <div class="scroller__item">
-                    <div class="card h-100 course-card">
-                        <img src="image/nlp.jpg" class="card-img-top" alt="..."
-                            style="width: 100%; height: 200px; object-fit: cover;">
-                        <div class="card-body course-title-card">
-                            <div class="title_desc" style="width: 75%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
-                                <h5 class="card-title course-title">{{$course->name}}</h5>
-                                <p class="card-text course-descriptor">{{$course->description}}</p>
-                            </div>
-                            <div class="rating" style="width: 25%;">
-                                <span class="badge bg-primary rating-container">
-                                    <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
-                                    {{$course->rating}}
-                                </span>
-                            </div>
-                        </div>
-                        <ul class="list-group list-group-flush"">
-                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039; border-color: #102770;">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted" style="color: #102770 !important">Price:</span>
-                                    <span class="text-success">${{$course->price}}</span>
+                @foreach ($courses as $course)
+                    <div class="scroller__item">
+                        <div class="card h-100 course-card">
+                            <img src="image/nlp.jpg" class="card-img-top" alt="..."
+                                style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="card-body course-title-card">
+                                <div class="title_desc"
+                                    style="width: 75%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
+                                    <h5 class="card-title course-title">{{ $course->name }}</h5>
+                                    <p class="card-text course-descriptor">{{ $course->description }}</p>
                                 </div>
-                            </li>
-                            <li class="list-group-item" style="background-color: rgba(248, 249, 250, 0.65); color: #152039">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted" style="color: #102770 !important">Tutor:</span>
-                                    <span>{{$course->tutor}}</span>
+                                <div class="rating" style="width: 25%;">
+                                    <span class="badge bg-primary rating-container">
+                                        <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
+                                        {{ $course->rating }}
+                                    </span>
                                 </div>
-                            </li>
-                        </ul>
-                        <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
-                            <a href="nlp" class="btn btn-primary">Detail</a>
+                            </div>
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item"
+                                    style="background-color: rgba(248, 249, 250, 0.65); color: #152039; border-color: #102770;">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted" style="color: #102770 !important">Price:</span>
+                                        <span class="text-success">${{ $course->price }}</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"
+                                    style="background-color: rgba(248, 249, 250, 0.65); color: #152039">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted" style="color: #102770 !important">Tutor:</span>
+                                        <span>{{ $course->tutor }}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
+                                <a href="nlp" class="btn btn-primary">Detail</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-          </div>
+                @endforeach
+            </div>
         </div>
-      </section>
+    </section>
     {{-- End Feature Course --}}
 
     {{-- Benefit --}}
@@ -197,12 +182,11 @@
         <h2>Ready to Start Learning?</h2>
         <p>Join thousands of learners and enhance your skills today.</p>
         <a href="
-        @if(Auth::check())
-        /Courses
+        @if (Auth::check()) /Courses
         @else
-        /register
-        @endif
-        " class="btn btn-primary btn-lg">Get Started</a>
+        /register @endif
+        "
+            class="btn btn-primary btn-lg">Get Started</a>
     </section>
     {{-- End Benefit --}}
 @endsection

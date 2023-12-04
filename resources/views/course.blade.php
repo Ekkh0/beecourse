@@ -19,7 +19,7 @@
             @forelse($results ?? $courses ?? [] as $course)
                 <div class="col">
                     <div class="card h-100 course-card">
-                        <img src="image/nlp.jpg" class="card-img-top" alt="..."
+                        <img src="{{$course->image_url}}" class="card-img-top" alt="..."
                             style="width: 100%; height: 200px; object-fit: cover;">
                         <div class="card-body course-title-card">
                             <div class="title_desc" style="width: 65%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 10px;">
