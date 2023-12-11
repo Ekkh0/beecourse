@@ -28,4 +28,5 @@ class CourseController extends Controller
         $chapters = Content::where('course_id', '=', $course->id)->paginate(6);
         return view("detail", ["course"=>$course, "chapters"=>$chapters]);
     }
+
 }
