@@ -9,7 +9,7 @@ use App\Models\Content;
 class CourseController extends Controller
 {
     public function index(){
-        $courses = Course::paginate(6);
+        $courses = Course::orderBy('rating', 'DESC')->paginate(6);
         return view("home", ["courses"=>$courses]);
     }
 

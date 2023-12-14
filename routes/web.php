@@ -46,5 +46,3 @@ Route::post('/checkout', [CheckoutController::class,'checkout'])->name('checkout
 Route::get('/terms', function () {
     return view('terms');
 });
-
-// Route::get('/clustering-classification-content/{id}', [DetailCourseController::class,'pagecontents'])->name('clustering-classification-content');
