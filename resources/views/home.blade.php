@@ -108,7 +108,7 @@
                             <div class="card-body course-title-card">
                                 <div class="title_desc"
                                     style="width: 75%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
-                                    <h5 class="card-title course-title">{{ $course->name }}</h5>
+                                    <h5 class="card-title shortened">{{ $course->name }}</h5>
                                     <p class="card-text course-descriptor">{{ $course->description }}</p>
                                 </div>
                                 <div class="rating" style="width: 25%;">
