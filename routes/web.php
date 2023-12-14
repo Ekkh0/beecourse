@@ -42,12 +42,6 @@ Route::get('/cart/reset', [CartController::class, 'resetCart'])->name('cart.rese
 Route::get('/cart/delete/{courseId}', [CartController::class, 'delete'])->name('cart.delete');
 Route::get('/search', [Searchcont::class, 'search']);
 
-
-Route::get('/courses/{id}', [DetailCourseController::class, 'showDetail'])->name('courses-detail');
-Route::get('/clustering-classification', [DetailCourseController::class, 'index'])->name('clustering-classification');
-
-
-Route::get('/clustering-classification-content/{id}', [DetailCourseController::class, 'showContent'])->name('clustering-classification-content');
 Route::post('/checkout', [CheckoutController::class,'checkout'])->name('checkout');
 Route::get('/terms', function () {
     return view('terms');

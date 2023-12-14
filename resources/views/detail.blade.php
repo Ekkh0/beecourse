@@ -42,28 +42,6 @@ Clustering & Classification With Machine Learning In Python
                     </div>
                 </div>
 
-                <!-- What You Will Learn -->
-                {{-- <div class="card mt-4">
-                    <div class="card-body">
-                        <h3>What You Will Learn</h3>
-                        <ul>
-                            <li><span class="course-icon">&#128218;</span>Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Voluptas, asperiores.</li>
-                            <li><span class="course-icon">&#128214;</span> Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Voluptas, asperiores.</li>
-                            <li><span class="course-icon">&#128220;</span> Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Voluptas, asperiores.
-                            </li>
-                            <li><span class="course-icon">&#128172;</span> Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Voluptas, asperiores.
-                            </li>
-                            <li><span class="course-icon">&#128187;</span> Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Voluptas, asperiores.
-                            </li>
-                        </ul>
-                    </div>
-                </div> --}}
-
                 <!-- Course Includes -->
                 <div class="card mt-4">
                     <div class="card-body">

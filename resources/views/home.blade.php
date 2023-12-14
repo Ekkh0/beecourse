@@ -95,7 +95,7 @@
                                 </li>
                             </ul>
                             <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
-                                <a href="nlp" class="btn btn-primary">Detail</a>
+                                <a href="{{route('courses.getDetail', $course->id)}}" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                 </li>
                             </ul>
                             <div class="card-body" style="background-color: rgba(248, 249, 250, 0.65);">
-                                <a href="nlp" class="btn btn-primary">Detail</a>
+                                <a href="{{route('courses.getDetail', $course->id)}}" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                     </div>
