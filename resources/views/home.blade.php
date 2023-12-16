@@ -107,11 +107,11 @@
                                 style="width: 100%; height: 200px; object-fit: cover;">
                             <div class="card-body course-title-card">
                                 <div class="title_desc"
-                                    style="width: 75%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
+                                    style="width: 65%; display: flex; flex-direction: column; justify-content: center; margin: 10px 0 10px 24px;">
                                     <h5 class="card-title shortened">{{ $course->name }}</h5>
                                     <p class="card-text course-descriptor">{{ $course->description }}</p>
                                 </div>
-                                <div class="rating" style="width: 25%;">
+                                <div class="rating" style="width: 35%;">
                                     <span class="badge bg-primary rating-container">
                                         <iconify-icon icon="solar:star-bold" style="font-size: 22px;"></iconify-icon>
                                         {{ $course->rating }}
