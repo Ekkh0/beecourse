@@ -20,10 +20,20 @@
 			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: absolute; transform:translateX(-50%); left: 50%; top: 3%;">
 				{{$message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
+					<span aria-hidden="true">&times;</span>
 				</button>
-			  </div>
+			</div>
 			@enderror
+			@if($errors->all())
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: absolute; transform:translateX(-50%); left: 50%; top: 3%; z-index: 100;">
+				@foreach ($errors->all() as $error)
+				<p>{{$error}}</p>
+				@endforeach
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			@endif
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
@@ -43,7 +53,7 @@
 											<div class="form-group">
 												<input type="email" name="logemail" class="form-style" 
 												@error('logemail')
-												placeholder="Email Wajib Diisi!"
+												placeholder={{$message}}
 												style="background-color: darkred"
 												@enderror
 												placeholder="Email"
